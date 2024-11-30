@@ -24,7 +24,8 @@ public class AppConfig {
         return new NotificacaoAspect();
     }
 
-    @Bean AutenticacaoAspect autenticacaoAspect(){
+    @Bean
+    AutenticacaoAspect autenticacaoAspect() {
         return new AutenticacaoAspect();
     }
 

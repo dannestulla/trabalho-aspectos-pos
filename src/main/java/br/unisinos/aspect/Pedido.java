@@ -12,9 +12,9 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 class Pedido {
-	private int id;
-	private String cliente;
-	private List<String> produtos;
-	private double valorTotal;
+    final private int id;
+    private String cliente;
+    private List<String> produtos;
+    private double valorTotal;
 }
 
