@@ -1,0 +1,62 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.0'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'br.unisinos'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework:spring-aop:6.2.0'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	compileOnly 'org.projectlombok:lombok:1.18.36'
+	annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.36'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+	implementation 'org.aspectj:aspectjrt:1.9.20.1'
+	implementation 'org.aspectj:aspectjweaver:1.9.9.1'
+	implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+
+	/**
+	 * <dependencies>
+	 <!-- Spring AOP -->
+	 <dependency>
+	 <groupId>org.springframework</groupId>
+	 <artifactId>spring-aop</artifactId>
+	 <version>5.3.24</version>
+	 </dependency>
+
+	 <!-- AspectJ -->
+	 <dependency>
+	 <groupId>org.aspectj</groupId>
+	 <artifactId>aspectjweaver</artifactId>
+	 <version>1.9.9.1</version>
+	 </dependency>
+
+	 <!-- Log4j2 (opcional, para log de auditoria) -->
+	 <dependency>
+	 <groupId>org.apache.logging.log4j</groupId>
+	 <artifactId>log4j-api</artifactId>
+	 <version>2.20.0</version>
+	 </dependency>
+	 </dependencies>
+	 */
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
